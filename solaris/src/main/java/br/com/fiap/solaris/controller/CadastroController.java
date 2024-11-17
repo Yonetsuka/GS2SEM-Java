@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping("/pedido")
+@RequestMapping("/cadastro")
 public class CadastroController{
 
   @Autowired
