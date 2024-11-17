@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/pedido")
-public class PedidoController{
+public class CadastroController{
 
   @Autowired
   private PedidoRepository pedidoRepository;
