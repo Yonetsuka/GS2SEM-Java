@@ -19,7 +19,35 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
+    /*
+    @Autowired
+    private DataSource dataSource;
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+        http.authorizeHttpRequests((requests) -> requests
+                .anyRequest().authenticated()
+        ).formLogin((form)->form
+                .loginPage("/login")
+                .permitAll()
+        );
+        http.csrf((csrf)-> csrf.disable());
+        return http.build();
+    }
 
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        UserDetails user =
+                User.builder()
+                        .username("usuario")
+                        .password(encoder.encode("senha"))
+                        .roles("ADM")
+                        .build();
+        auth.jdbcAuthentication()
+                .dataSource(dataSource)
+                .passwordEncoder(encoder)
+                .withUser(user);
+    }*/
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests((requests) -> requests
