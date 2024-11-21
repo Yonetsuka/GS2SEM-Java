@@ -79,5 +79,6 @@ public class Item{
         this.urlProduto = requisicao.urlProduto();
         this.urlImagem = requisicao.urlImagem();
         this.descricao = requisicao.descricao();
+        this.status = StatusPedido.AGUARDANDO;
     }
 }
