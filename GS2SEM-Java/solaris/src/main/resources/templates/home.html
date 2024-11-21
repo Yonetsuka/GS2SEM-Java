@@ -23,6 +23,11 @@ Rm:98705 ->
             </a>
         </nav>
         <div class="card mb-3" th:each="item : ${itens}">
+            <th:block th:switch="${pedido.status.name()}">
+                <div th:case="'AGUARDANDO'" class="card-header alert alert-warning" th:text="${pedido.nomeProduto}"></div>
+                <div th:case="'APROVADO'" class="card-header alert alert-success" th:text="${pedido.nomeProduto}"></div>
+                <div th:case="'ENTREGUE'" class="card-header alert alert-dark" th:text="${pedido.nomeProduto}"></div>
+            </th:block>
             <div class="card-header" th:text="${item.nomeProduto}">Nome do produto</div>
                 <div class="card-body">
                     <div class="row">
