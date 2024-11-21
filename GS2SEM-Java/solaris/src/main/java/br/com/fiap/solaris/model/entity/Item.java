@@ -23,6 +23,16 @@ public class Item{
     private String urlProduto;
     private String urlImagem;
     private String descricao;
+    @Enumerated(EnumType.STRING)
+    private StatusPedido status;
+
+    public StatusPedido getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusPedido status) {
+        this.status = status;
+    }
 
     public Long getCodigoProduto(){
         return codigoProduto;
