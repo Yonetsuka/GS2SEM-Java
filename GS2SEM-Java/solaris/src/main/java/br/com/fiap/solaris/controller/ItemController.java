@@ -21,7 +21,7 @@ public class ItemController {
 
     @GetMapping("/formulario")
     public ModelAndView formulario(RequisicaoNovoPedido requisicao){
-        ModelAndView mv = new ModelAndView("pedido/formulario");
+        ModelAndView mv = new ModelAndView("item/formulario");
         return mv;
     }
 
@@ -29,7 +29,7 @@ public class ItemController {
     public ModelAndView novo(@Valid RequisicaoNovoPedido requisicao, BindingResult result){
         ModelAndView mv;
         if(result.hasErrors()){
-            mv = new ModelAndView("pedido/formulario");
+            mv = new ModelAndView("item/formulario");
             return mv;
         }
         Item item = new Item(requisicao);
